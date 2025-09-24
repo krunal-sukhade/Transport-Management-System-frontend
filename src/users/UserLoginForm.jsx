@@ -58,7 +58,7 @@ const UserLoginForm = () => {
                 progress: undefined,
               });
               setTimeout(() => {
-                window.location.href = "/home";
+               navigate("/home");
               }, 1000); // Redirect after 3 seconds
             } else {
               toast.error(res.responseMessage, {
