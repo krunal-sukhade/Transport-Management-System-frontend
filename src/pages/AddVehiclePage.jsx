@@ -66,7 +66,10 @@ const AddVehiclePage = () => {
     formData.append("oilChangeDate", vehicle.oilChangeDate);
     formData.append("vehiclePurchaseDate", vehicle.vehiclePurchaseDate);
     formData.append("remark", vehicle.remark);
+    if (selectedImage1) {
     formData.append("uploadDocuments", selectedImage1);
+  }
+
 
     axios
       .post("https://transport-management-system-backend.onrender.com/api/transport/vehicle/add", formData, {
@@ -359,7 +362,7 @@ const AddVehiclePage = () => {
                     className="form-control"
                     type="file"
                     onChange={(e) => setSelectImage1(e.target.files[0])}
-                    required
+                    
                   />
                 </div>
                 <div className="d-flex aligns-items-center justify-content-center mb-2">

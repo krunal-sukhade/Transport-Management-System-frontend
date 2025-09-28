@@ -53,7 +53,10 @@ const AddClientPage = () => {
       formData.append("sgstRate", client.sgstRate);
     }
     formData.append("comments", client.comments);
+    if (selectedDocument) {
     formData.append("uploadDocuments", selectedDocument);
+    }
+
 
     axios
       .post("https://transport-management-system-backend.onrender.com/api/transport/client/add", formData, {
