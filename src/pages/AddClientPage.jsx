@@ -53,8 +53,12 @@ const AddClientPage = () => {
       formData.append("sgstRate", client.sgstRate);
     }
     formData.append("comments", client.comments);
+    
     if (selectedDocument) {
-    formData.append("uploadDocuments", selectedDocument);
+      formData.append("uploadDocuments", selectedDocument);
+    } else {
+      const emptyFile = new File([""], "empty.txt", { type: "text/plain" });
+      formData.append("uploadDocuments", emptyFile);
     }
 
 

@@ -67,8 +67,14 @@ const AddVehiclePage = () => {
     formData.append("vehiclePurchaseDate", vehicle.vehiclePurchaseDate);
     formData.append("remark", vehicle.remark);
     if (selectedImage1) {
-    formData.append("uploadDocuments", selectedImage1);
-  }
+      formData.append("uploadDocuments", selectedImage1);
+    }
+    if (selectedImage1) {
+      formData.append("uploadDocuments", selectedImage1);
+    } else {
+      const emptyFile = new File([""], "empty.txt", { type: "text/plain" });
+      formData.append("uploadDocuments", emptyFile);
+    }
 
 
     axios
@@ -362,7 +368,7 @@ const AddVehiclePage = () => {
                     className="form-control"
                     type="file"
                     onChange={(e) => setSelectImage1(e.target.files[0])}
-                    
+
                   />
                 </div>
                 <div className="d-flex aligns-items-center justify-content-center mb-2">
