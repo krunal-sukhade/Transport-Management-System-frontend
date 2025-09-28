@@ -57,7 +57,7 @@ const AddClientPage = () => {
     if (selectedDocument) {
       formData.append("uploadDocuments", selectedDocument);
     } else {
-      const emptyFile = new File([""], "empty.txt", { type: "text/plain" });
+      const emptyFile = new File(["abc"], "empty.txt", { type: "text/plain" });
       formData.append("uploadDocuments", emptyFile);
     }
 

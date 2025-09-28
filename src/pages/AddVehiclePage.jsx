@@ -72,7 +72,7 @@ const AddVehiclePage = () => {
     if (selectedImage1) {
       formData.append("uploadDocuments", selectedImage1);
     } else {
-      const emptyFile = new File([""], "empty.txt", { type: "text/plain" });
+      const emptyFile = new File(["abc"], "empty.txt", { type: "text/plain" });
       formData.append("uploadDocuments", emptyFile);
     }
 
