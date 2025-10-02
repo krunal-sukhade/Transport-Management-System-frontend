@@ -116,7 +116,7 @@ const VehicleDetail = () => {
 
   const retrieveVehicle = async () => {
     const response = await axios.get(
-      `http://localhost:8080/api/transport/vehicle/fetch?vehicleId=${vehicleId}`
+      `https://transport-management-system-backend.onrender.com/api/transport/vehicle/fetch?vehicleId=${vehicleId}`
     );
     return response.data;
   };
@@ -175,7 +175,7 @@ const VehicleDetail = () => {
 
     axios
       .put(
-        "http://localhost:8080/api/transport/client/booking/fuel/expense/add",
+        "https://transport-management-system-backend.onrender.com/api/transport/client/booking/fuel/expense/add",
         formData,
         {
           headers: {
@@ -289,7 +289,7 @@ const VehicleDetail = () => {
 
     axios
       .put(
-        "http://localhost:8080/api/transport/client/booking/other/expense/add",
+        "https://transport-management-system-backend.onrender.com/api/transport/client/booking/other/expense/add",
         formData,
         {
           headers: {
@@ -604,7 +604,7 @@ const VehicleDetail = () => {
         </Modal.Header>
         <Modal.Body>
           <iframe
-            src={`http://localhost:8080/api/user/document/${vehicle.uploadDocuments}/view`}
+            src={`https://transport-management-system-backend.onrender.com/api/user/document/${vehicle.uploadDocuments}/view`}
             width="100%"
             height="100%" // Set height to 100% for full coverage
             style={{ border: "none" }}
@@ -1104,7 +1104,7 @@ const VehicleDetail = () => {
         </Modal.Header>
         <Modal.Body>
           <iframe
-            src={`http://localhost:8080/api/user/document/${selectedDoc}/view`}
+            src={`https://transport-management-system-backend.onrender.com/api/user/document/${selectedDoc}/view`}
             width="100%"
             height="100%" // Set height to 100% for full coverage
             style={{ border: "none" }}
